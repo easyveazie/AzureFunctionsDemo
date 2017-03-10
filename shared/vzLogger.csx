@@ -46,7 +46,7 @@ public static void WriteCustomLogEvent(
     var eventInfoAsJson = eventObj.SerializeAsJson();
 	
     var logFunctionUri = "https://vzfunctions.azurewebsites.net/api/HttpLogger";
-    var logFunctionParams = "?code=sTthaRPD7400HBVgjTRTaitaysNMtqc0KXFWozl81ZBqPWEava8RBg==";
+    var logFunctionParams = "?code=v3IAaiFXuS9s54w6x2kibi3fse0SQpAjcxrLIlOb2u7R9KJbF5us1Q";
 
     HttpClient client = new HttpClient();
     client.BaseAddress = new Uri(logFunctionUri);
