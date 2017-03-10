@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "path": "images/{name}",
+      "type": "blobTrigger",
+      "name": "image",
+      "direction": "in",
+      "connection": "StorageConnectionString"
+    },
+    {
+      "path": "images-sm/{name}",
+      "type": "blob",
+      "name": "imageSmall",
+      "direction": "out",
+      "connection": "StorageConnectionString"
+    },
+    {
+      "path": "images-md/{name}",
+      "type": "blob",
+      "name": "imageMedium",
+      "direction": "out",
+      "connection": "StorageConnectionString"
+    }
+  ],
+  "disabled": false
+}
