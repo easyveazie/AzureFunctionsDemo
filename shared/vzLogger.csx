@@ -58,8 +58,7 @@ public static void WriteCustomLogEvent(
 
     // Add an Accept header for JSON format.
     client.DefaultRequestHeaders.Accept.Add(
-        new MediaTypeWithQualityHeaderValue("application/json"));
-	
+        new MediaTypeWithQualityHeaderValue("application/json"));	
 									
     HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, logFunctionParams);
     request.Content = new StringContent(eventInfoAsJson,
