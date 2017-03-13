@@ -1,6 +1,6 @@
 #load "..\shared\vzLogger.csx"
 
-using System.Net;
+using System.Net; 
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {

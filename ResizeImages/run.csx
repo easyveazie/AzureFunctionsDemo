@@ -1,5 +1,5 @@
 #load "..\shared\vzLogger.csx"
-
+ 
 using ImageResizer;
  
 public static void Run(
