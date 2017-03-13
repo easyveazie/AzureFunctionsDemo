@@ -1,4 +1,4 @@
-#load "..\shared\vzlogger.csx"
+#load "..\shared\vzLogger.csx"
 
 using ImageResizer;
  
@@ -8,7 +8,8 @@ public static void Run(
         Stream imageMedium
     )
 {
-    WriteCustomLogEvent("No image stream is available to stream.");
+    WriteCustomLogEvent("Resizing some images!");
+
     var imageBuilder = ImageResizer.ImageBuilder.Current;
     var size = imageDimensionsTable[ImageSize.Small];
 

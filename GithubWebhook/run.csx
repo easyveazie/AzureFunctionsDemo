@@ -1,4 +1,4 @@
-#load "..\shared\vzlogger.csx"
+#load "..\shared\vzLogger.csx"
 
 using System.Net;
 

@@ -1,3 +1,4 @@
+#load "..\shared\vzLogger.csx"
 #r "NewtonSoft.Json"
 
 using System.Net;
@@ -14,14 +15,13 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 {
     try
     {
-        // Get request body
         dynamic data = await req.Content.ReadAsAsync<object>();
 
+        // Grab the request body and write the output to our event hub
         var reqBodyContent = JsonConvert.DeserializeObject<Person>(data.ToString());
-        log.Info("First: " + reqBodyContent.First);
-        log.Info("Last: " + reqBodyContent.Last);
+        var msg = "First: " + reqBodyContent.First + "Last: " + reqBodyContent.Last;
+        WriteCustomLogEvent(msg);
 
-        
         return req.CreateResponse(HttpStatusCode.OK);
     }
     catch

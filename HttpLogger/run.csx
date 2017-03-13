@@ -1,4 +1,4 @@
-#load "..\shared\vzlogger.csx"
+#load "..\shared\vzLogger.csx"
 
 public static void Run(HttpRequestMessage req, out string outputEventHubMessage, TraceWriter log)
 {    
