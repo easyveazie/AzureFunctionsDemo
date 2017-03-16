@@ -1,0 +1,37 @@
+﻿
+############
+NuGets
+############
+
+Add project.json for NuGet
+
+{
+  "frameworks": {
+    "net46":{
+      "dependencies": {
+        "Newtonsoft.Json": "6.0.8"
+      }
+    }
+  }
+}
+
+
+############
+Sharing Demo:
+############
+
+Go to App Service Editor (Function app settings, top button)
+Create folder called “shared”
+Add file called utils.csx
+Add code:
+
+public static void MyLogger(TraceWriter log, string logtext)
+{
+	log.Verbose("VERBOSE: " + logtext);
+}
+
+Back to HTTPTriggerCsharp
+#load "..\shared\utils.csx"
+MyLogger(log, "This is from my shared method");
+
+Compile and run

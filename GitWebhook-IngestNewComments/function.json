@@ -10,6 +10,13 @@
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "type": "eventHub",
+      "name": "outgitissueseventhub",
+      "path": "githubissues",
+      "connection": "githubIssuesEventHub",
+      "direction": "out"
     }
   ],
   "disabled": false
