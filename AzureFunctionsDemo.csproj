@@ -9,8 +9,8 @@
     <Content Include="DemoCode.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GitWebhook-IngestNewComments\function.json" />
-    <None Include="GitWebhook-IngestNewComments\run.csx" />
+    <None Include="GitWebhook-IngestRepoComments\function.json" />
+    <None Include="GitWebhook-IngestRepoComments\run.csx" />
     <None Include="host.json" />
     <None Include="NewCommentsStream\function.json" />
     <None Include="NewCommentsStream\run.csx" />
